@@ -30,7 +30,7 @@ const Series = () => {
                 <td>{record.status}</td>
                 <td>
                     <button className='btn btn-sm btn-danger' onClick={() => deleteData(record.id)}>Remover</button>
-                    <Link to={`/series/${record.id}`} className='ml-1 btn btn-sm btn-warning'>Editar</Link>
+                    <Link to={`/series/${record.id}`} className='ml-1 btn btn-sm btn-warning'>Info</Link>
                 </td>
             </tr> 
         )
