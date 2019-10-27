@@ -26,7 +26,7 @@ const Generos = () => {
             <tr key={record.id}>
                 <th scope='row'>{record.id}</th>
                 <td>{record.name}</td>
-                <td>
+                <td style={{width: '15%'}}>
                     <button className='btn btn-sm btn-danger' onClick={() => deleteGenero(record.id)}>Remover</button>
                     <Link to={`/generos/${record.id}`} className='ml-1 btn btn-sm btn-warning'>Editar</Link>
                 </td>

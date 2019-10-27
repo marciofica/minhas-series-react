@@ -9,7 +9,11 @@ import NovaSerie from './NovaSerie'
 import InfoSerie from './InfoSerie'
 
 const Home = () => {
-  return <h1>Home</h1>
+  return (
+    <div className='container text-center'>
+      <h3 className='mt-3'>Escolha uma das opções acima</h3> 
+    </div>
+  )
 }
 
 

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import {Badge} from 'reactstrap'
 
 const Series = () => {
     const [data, setData] = useState([])
@@ -23,12 +24,15 @@ const Series = () => {
 
     const renderizalinha = record => {
         return (
-            <tr key={record.id} background={record.background}>
+            <tr key={record.id}>
                 <th scope='row'>{record.id}</th>
                 <td>{record.name}</td>
                 <td>{record.genre}</td>
-                <td>{record.status}</td>
                 <td>
+                    { record.status === 'ASSISTIDO' && <Badge color='success'>Assitido</Badge> }
+                    { record.status === 'PARA_ASSISTIR' && <Badge color='warning'>Para assistir</Badge> }
+                </td>
+                <td style={{width: '15%'}}>
                     <button className='btn btn-sm btn-danger' onClick={() => deleteData(record.id)}>Remover</button>
                     <Link to={`/series/${record.id}`} className='ml-1 btn btn-sm btn-warning'>Info</Link>
                 </td>
